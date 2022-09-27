@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
 import { Login } from './User';
 
-import "./RegisterLoginComponent.css";
+import "./RegisterLogin.css";
 
 //On exporte notre fonction pour gérer l'affichage du formulaire de connexion
 export default function LoginComponent() {

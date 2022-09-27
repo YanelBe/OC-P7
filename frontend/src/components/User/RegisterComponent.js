@@ -4,7 +4,7 @@ import { useState } from 'react';
 //d'afficher les messages si une erreur se produit pendant l'envoi du formulaire d'inscription
 import { Signup } from './User';
 
-import "./RegisterLoginComponent.css";
+import "./RegisterLogin.css";
 
 //On exporte notre fonction pour gérer l'affichage du formulaire de création de compte
 export default function RegisterComponent(props) {

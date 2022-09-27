@@ -28,8 +28,8 @@ const Comment = require("./routes/comment");
 
 //On se connecte à MongoDB grâce à Mongoose, en utilisant dotenv pour masquer les identifiants, disponibles dans le fichier .env
 mongoose.connect(`mongodb+srv://${process.env.DBUSER}:${process.env.DBPASS}@cluster0.ceoe8ut.mongodb.net/?retryWrites=true&w=majority`)
-    .then(() => console.log("Connexion à MongoDB réussie !"))
-    .catch(() => console.log("Connection à MongoDB échouée..."));
+    .then(() => console.log("Connection to MongoDB successful"))
+    .catch(() => console.log("Connection to MongoDB failed"));
 
 //On rajoute ce middleware CORS pour autoriser l'accès à notre API depuis n'importe quelle origine
 app.use((req, res, next) => {
