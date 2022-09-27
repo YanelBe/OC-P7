@@ -1,0 +1,23 @@
+.signup-login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+
+.link-button {
+    margin: 30px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--color-tertiary);
+    cursor: pointer;
+    padding: 12px;
+}
+
+.signup-login-message {
+    margin: 0 auto;
+    max-width: 500px;
+}

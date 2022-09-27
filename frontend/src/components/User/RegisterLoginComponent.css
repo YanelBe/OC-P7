@@ -1,0 +1,59 @@
+.card-signinup {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 50px;
+    color: white;
+    border-radius: 25px;
+    background-color: aliceblue;
+    box-shadow: var(--box-shadow-card);
+}
+
+.card-signinup form {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-signinup p {
+    color: black;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+.card-signinup span {
+    color: var(--color-secondary);
+}
+
+.card-signinup input {
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.card-signinup form p {
+    margin-top: 0;
+    font-size: 0.8em;
+    color: black;
+}
+
+.card-signinup form button {
+    font-size: 1.4em;
+    color: white;
+    max-width: 100%;
+    width: 200px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-secondary);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.card-signinup form button:focus {
+    color: var(--color-tertiary);
+    background-color: var(--color-secondary);
+}

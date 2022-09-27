@@ -1,0 +1,103 @@
+.comment-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-background);
+    margin: 20px;
+    padding: 14px;
+    border-radius: 15px;
+}
+
+.comment-box__content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.comment-box__name {
+    width: fit-content;
+    font-weight: bold;
+}
+
+.comment-box__text {
+    padding: 20px;
+}
+
+.comment-box__create-time {
+    padding-left: 10px;
+    font-size: 0.8em;
+}
+
+.comment-box__actions {
+    position: relative;
+}
+
+.comment-box__menu_opener {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-box__actions-menu {
+    position: absolute;
+    right: 10px;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.comment-box__modify-button,
+.comment-box__delete-button {
+    padding: 8px;
+    display: inline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.comment-box__modify-button:hover,
+.comment-box__delete-button:hover {
+    color: var(--color-primary);
+}
+
+.delete-box {
+    position: fixed;
+    border-radius: 16px;
+    border: 1px solid black;
+}
+
+.delete-box p {
+    padding: 20px;
+}
+
+.delete-box__button-div {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete-box__button {
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-box__button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .comment-box {
+        margin: 8px 0;
+        max-width: 100%;
+    }
+}

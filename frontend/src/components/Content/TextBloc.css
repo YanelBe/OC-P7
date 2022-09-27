@@ -1,0 +1,114 @@
+.text-bloc__background {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.text-bloc__interface {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    margin-top: 200px;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.text-bloc__top-bar {
+    position: relative;
+    display: flex;
+    height: 20%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.text-bloc__close-button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.text-bloc__close-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.text-bloc__form {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+}
+
+#text {
+    flex-grow: 1;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    resize: none;
+}
+
+#text:focus-visible {
+    outline: none;
+}
+
+.text-bloc__bottom-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    height: 40%;
+    align-items: center;
+}
+
+#text-bloc__image-upload {
+    color: transparent;
+}
+
+
+#text-bloc__image-upload::file-selector-button {
+    font-size: 1.2em;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    width: 160px;
+    height: 50px;
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    border: none;
+}
+
+.text-bloc__submit-button {
+    font-size: 1.2em;
+    color: white;
+    max-width: 100%;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--color-primary);
+    border-radius: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.text-bloc__submit-button:hover,
+.text-bloc__submit-button:focus,
+#text-bloc__image-upload::file-selector-button:hover,
+#text-bloc__image-upload::file-selector-button:focus {
+    color: var(--color-primary);
+    font-weight: bold;
+    background-color: white;
+    border: 2px solid black;
+}

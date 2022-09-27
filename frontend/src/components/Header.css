@@ -1,0 +1,59 @@
+#header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 80px;
+    padding: 0 80px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.header-logo {
+    max-width: 250px;
+}
+
+.header-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    color: var(--color-primary);
+    font-size: 1em;
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button__icon {
+    font-size: 1.5rem;
+    padding: 10px;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 768px) {
+    #header {
+        padding: 0;
+    }
+
+    .header-logo {
+        max-width: 200px;
+    }
+
+    .logout-button__icon {
+        font-size: 30px;
+    }
+
+    .logout-button__text {
+        display: none;
+    }
+}

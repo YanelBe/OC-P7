@@ -1,0 +1,159 @@
+.post-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.post-box__content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: var(--box-shadow-card);
+}
+
+.post-box__name-text {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-bottom: 2px solid black;
+}
+
+.post-box__name-text__name-edit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-box__text {
+    padding: 20px 0;
+}
+
+.post-box__name-text__name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.post-box__name-text__edit-menu {
+    margin: 0 10px 0 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-box__create-time {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 0.8em;
+    color: var(--color-tertiary);
+}
+
+.profile-picture-post {
+    height: 200px;
+    width: 200px;
+}
+
+.post-box_picture {
+    height: fit-content;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.post-box__like-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px 0;
+}
+
+.post-box__like-comment__like-button,
+.post-box__like-comment__comment-button {
+    display: flex;
+    align-items: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.post-box__like-comment__like-button svg {
+    height: 20px;
+    width: 20px;
+    margin: 0 16px;
+}
+
+.post-box__comments {
+    margin: 0 30px;
+}
+
+.deletePostModal {
+    position: fixed;
+    border-radius: 15px;
+    border: 3px solid var(--color-tertiary);
+}
+
+.deletePostModal p {
+    margin-top: 0px;
+}
+
+.deletePostDialog__button-div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.deletePostDialog__button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.deletePostDialog__button:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.delete-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-button:hover,
+.delete-button:focus {
+    background-color: var(--color-secondary);
+}
+
+.delete-button__icon {
+    height: 20px;
+    width: 20px;    
+}
+
+
+@media screen and (max-width: 768px) {
+    .post-box__content 
+
+    .post-box__comments {
+        margin: 16px;
+        padding: 0;
+    }
+}
