@@ -8,6 +8,6 @@
 
 - Dans le backend, exécuter la commande "nodemon server" pour initialiser le serveur qui écoutera le port 3000
 
-- Dans le frontend, exécuter la commande "npm start" pour initialiser le serveur qui écoutera le port 5000.
+- Dans le frontend, exécuter la commande "npm start" pour initialiser le serveur qui écoutera le port 8080.
 
-- Une page devrait s'ouvrir, le localhost::5000 !
+- Une page devrait s'ouvrir, le localhost::8080 !
