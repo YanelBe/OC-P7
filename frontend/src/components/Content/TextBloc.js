@@ -73,10 +73,11 @@ export default function TextBloc(props) {
             } else if (contentType === "createComment") {
                 insertComment(response.newComment);
                 toggleCommentPublishMode();
-            //Si on souahite supprimer un commentaire
-            } } else if (contentType === 'editComment') {
+            //Si on souahite modifier un commentaire
+            } else if (contentType === "editComment") {
                 toggleCommentEditMode();
                 refreshComment(props.id, response.comment);
+            }
             //En cas d'erreur
         } else throw new Error(response);
     }
@@ -110,7 +111,7 @@ export default function TextBloc(props) {
         closeAction = togglePostPublishMode;
     //Si le contenu est l'édit de post et qu'on souhaite le fermer
     else if (contentType === "editPost") 
-    closeAction = togglePostEditMode;
+        closeAction = togglePostEditMode;
     //Si le contenu est la création de commentaire et qu'on souhaite le fermer
     else if (contentType === "createComment")
         closeAction = toggleCommentPublishMode;

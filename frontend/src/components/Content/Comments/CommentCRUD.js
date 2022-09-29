@@ -50,8 +50,7 @@ export async function GetAllComments(postId, token) {
 export async function updateComment(commentId, text, token) {
     try {
         //On attend de récupérer les données avec l'ID du commentaire à viser
-        const response = await fetch(
-            `http://localhost:3000/api/comment/${commentId}`, {
+        const response = await fetch(`http://localhost:3000/api/comment/${commentId}`, {
                 method: "PUT",
                 headers: {
                     Authorization: `Bearer ${token}`,

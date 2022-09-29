@@ -16,6 +16,7 @@ export default function Header() {
     //On utilise notre contexte d'authentification pour pouvoir gérer la déconnexion
     const { handleLogout, token } = useContext(AuthContext);
 
+    
     return (
         <header id="header">
             <NavLink to="/home">

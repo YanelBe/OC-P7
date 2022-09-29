@@ -21,18 +21,22 @@ export default function RegisterComponent(props) {
     //dans un message définit dans une fonction importée de notre fichier User
     const [serverResponse, setServerResponse] = useState("");
     
-    //On définit une variable toggle, pour
+    //On définit une variable toggle, pour changer entre le login et le register
     const { toggle } = props;
 
+    //On utilise la fonction handleChange() pour capter les entrées écrites dans le formulaire
     function handleChange(event) {
         const { name, value } = event.target;
         setUserInfo({ ...registerData, [name]: value });
         setServerResponse("");
     }
 
+    //Fonction pour gérer l'envoi des données de l'utilisateur
     async function handleSubmit(event) {
         event.preventDefault();
+        //On attend la réponse de notre fonction Signup
         const response = await Signup(registerData);
+        //Si on obtient une réponse positive, on enregistre les informations entrées
         if (response.status) {
             setUserInfo({
                 email: "",
@@ -40,12 +44,19 @@ export default function RegisterComponent(props) {
                 firstName: "",
                 lastName: "",
             });
+            //On affiche le message de confirmation
             setServerResponse(response.message);
+            //On définit une fonction asynchrone setTimeout() pour que la fonction "toggle"
+            //se déclenche après 2 secondes pour autoriser la connexion
             setTimeout(() => {
                 toggle();
             }, 2000);
+        //Sinon, on affiche l'erreur correspondante
         } else setServerResponse(response);
     }
+
+
+
 
     return (
         <div className="card-signinup">

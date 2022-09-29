@@ -25,6 +25,7 @@ export default function Home() {
     const [posts, setPosts] = useState([]);
     
     const getPosts = useState(1);
+    
     const getPostsRef = useRef(getPosts);
 
 
@@ -43,7 +44,7 @@ export default function Home() {
     async function handleDeletePost(postId) {
         //On fait appel à la fonction DeletePost
         const response = await DeletePost(postId, token);
-        //Si la requte renvoie une réponse
+        //Si la requête renvoie une réponse
         if (response.status) {
             //Si la requête n'est pas autorisée, on ramène vers la page de connexion
             if (response.status === 401) navigate("/");
@@ -56,7 +57,7 @@ export default function Home() {
     async function FetchAllPosts() {
         const response = await GetAllPosts(getPostsRef.current, token);
         if (response.status) {
-            if (response.status === 401) navigate('/');
+            if (response.status === 401) navigate("/");
             else {
                 setPosts((posts) => [...posts, ...response.newPosts]);
             }
